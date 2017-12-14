@@ -1,12 +1,31 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+
+# #!/usr/bin/env python
+# # -*- coding: utf-8 -*-
 from flask import Flask, jsonify
 from flask import request, redirect, json
 import requests
+import json
+from firebase import FirebaseUser
 import liverpool 
 import linio
 
 app = Flask(__name__)
+database = FirebaseUser()
+
+@app.route('/gift-users', methods = ['GET','POST'])
+def index():
+	if request.method == 'GET':
+		data = database.getTheGiftuser()
+		lista = []
+		lista.append(data)
+		return jsonify({'Gifts': lista})
+
+	elif request.method == 'POST':
+		data = request.json
+		user = database.createAGiftUser(data)
+		lista = []
+		lista.append(user)
+		return jsonify({'Gift-user':lista})
 
 @app.route('/params', methods = ['POST','GET'])
 def params():
