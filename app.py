@@ -4,6 +4,7 @@ from flask import Flask, jsonify
 from flask import request, redirect, json
 import requests
 import liverpool 
+import linio
 
 app = Flask(__name__)
 
@@ -14,8 +15,10 @@ def params():
 
 	elif request.method == 'GET':
 		parametro = request.args.get('params1','valor por default')
-		response = liverpool.busqueda(parametro)
-		return jsonify({"data":response})
+		response1 = liverpool.busqueda(parametro)
+		response2 = linio.busqueda(parametro)
+		response3 = response1 + response2
+		return jsonify({"data":response3})
 
 
 if __name__ == '__main__':
