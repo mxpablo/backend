@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD0c3lg7gp8XIjUbs6BmeAekMdHCokVAvc",
+    authDomain: "regalofrontend.firebaseapp.com",
+    databaseURL: "https://regalofrontend.firebaseio.com",
+    projectId: "regalofrontend",
+    storageBucket: "regalofrontend.appspot.com",
+    messagingSenderId: "389242292419"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript">
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+</script>
+
+
+    <title>Tu Regalo Ideal</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+ 
+  </head>
+
+  <body>
+    
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"> Tu regalo Ideal</a>
+        </div>
+        
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Escoge tu regalo ideal!</h1>
+        <p>Es tiempo de obtener el regalo que siempre has querido a traves de nuestra app, tu solo escoge tres regalos y tus amigos haran tu meta realidad, permiteles regalarte algo bien</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Descarga la app</a></p>
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Regalometro en tiempo real</h2>
+          <p>Consulta el progreso de tu meta en tiempo real con nuestro regalometro.</p>
+          <img src="assets/meter_2.jpg" class="img-responsive" alt="Regalometro">
+          
+        </div>
+        <div class="col-md-4">
+          <h2>Invita a tus amigos</h2>
+          <p>A través de tu red social favorita convoca a tus amigos y hazles saber tu deseo </p>
+          <img src="assets/invite.jpg" class="img-responsive" alt="Regalometro">
+       </div>
+        <div class="col-md-4">
+          <h2>Dashboard de evento</h2>
+          <p>Gestiona tu evento desde nuestra interfaz y revisa tu progreso.</p>
+          <img src="assets/dash.png" class="img-responsive" alt="Regalometro">
+          
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

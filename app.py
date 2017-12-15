@@ -1,7 +1,7 @@
 
 # #!/usr/bin/env python
 # # -*- coding: utf-8 -*-
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask import request, redirect, json
 import requests
 import json
@@ -38,6 +38,10 @@ def params():
 		response2 = linio.busqueda(parametro)
 		response3 = response1 + response2
 		return jsonify({"data":response3})
+
+@app.route('/')
+def home():
+	return render_template('index.html')
 
 
 if __name__ == '__main__':

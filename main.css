@@ -1,0 +1,13 @@
+.navbar-inverse{
+	background-color: #E94E4C;
+}
+.navbar-inverse .navbar-brand{
+	color: #B3B3B3;
+}
+.img-responsive{
+	padding: 9px;
+}
+.btn-primary{
+	background-color:#E94E4C;
+	text-align: center;
+}
